@@ -276,12 +276,12 @@ void modify_container_action(std::vector<double> v)
 			}
         default: break; 
         }
+		show_result(v, modified_v);
     }
     catch (std::exception e) 
 	{
         std::cout << e.what() << std::endl;
     }
-	show_result(v, modified_v);
     system("pause");
 }
 
