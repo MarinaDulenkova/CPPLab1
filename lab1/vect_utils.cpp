@@ -31,7 +31,7 @@ void modify(std::vector<double>& v)
 //модификаци€ части контейнера
 void modify(std::vector<double>& v, std::vector<double>::iterator first, std::vector<double>::iterator last) 
 {
-    double half_neg_sum = get_neg_sum(v.begin(), v.end()) / 2;
+    double half_neg_sum = get_neg_sum(first, last) / 2;
     if (half_neg_sum == 0) 
 	{ 
 		throw std::exception("¬ контейнере нет отрицательных чисел."); 
