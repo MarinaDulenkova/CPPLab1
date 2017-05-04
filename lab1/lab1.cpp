@@ -201,11 +201,7 @@ void show_result(std::vector<double> v, std::vector<double> modified_v)
 			{
 				file_name = get_file_name("Введите имя файла (Если файл существует, он будет перезаписан. Пустая строка - отмена.):");
 				if (file_name == "") {return;}
-				file = new std::fstream(file_name, std::fstream::in | std::fstream::out | std::fstream::trunc);
-				*file << "Контейнер до модификации:" << std::endl;
-				add_vect_to_file(v, *file);
-				*file << "Контейнер после модификации:" << std::endl;
-				add_vect_to_file(modified_v, *file);
+				file = &save_vect_to_file(modified_v, file_name);
 				file->close();
 				file_name = "";
 			}

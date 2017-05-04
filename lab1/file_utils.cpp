@@ -19,24 +19,6 @@ std::fstream& fill_file_with_numbers(int n, int m, std::string filename)
     return *fout;
 }
 
-/*
-//перенесено в заголовочный файл:
-//структура для генерации рандомных чисел в диапазоне [-m, m]
-struct Random 
-{
-public:
-    Random(int m) { max = m; }
-    double operator()();
-private:
-    int max;
-};
-
-double Random::operator()() 
-{
-    return double((std::rand()) % (2 * max) - max);
-}
-*/
-
 //заполнение текстового файла N целыми случайными числами в диапазоне от -M до M (с использованием алгоритма std::generate)
 std::fstream& fill_file_with_numbers_generate(int n, int m, std::string filename)
 {
